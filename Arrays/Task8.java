@@ -21,7 +21,7 @@ public class Task8
         System.out.println("Addition of arr1 and arr3 is:");
         for (int i = 0; i < arr4.length; i++)
         {
-            System.out.println(arr4[i]);
+            System.out.print(arr4[i] + " ");
         }
     }
 }

@@ -2,12 +2,11 @@ package Arrays;
 
 public class Task7
 {
-    // 7. Print SQUARE of the numbers for each array: arr1 and arr2.
     public static void printSquare(int[] arr)
     {
         for (int i = 0; i < arr.length; i++)
         {
-            System.out.println(arr[i] * arr[i]);
+            System.out.println(arr[i] * arr[i] + " ");
         }
     }
 
@@ -17,7 +16,7 @@ public class Task7
         {
             for (int j = 0; j < arr[i].length; j++)
             {
-                System.out.println(arr[i][j] * arr[i][j]);
+                System.out.print(arr[i][j] * arr[i][j] + " ");
             }
         }
     }

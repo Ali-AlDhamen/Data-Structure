@@ -8,9 +8,10 @@ public class Task6
         {
             if (arr[i] % 2 != 0)
             {
-                System.out.println(arr[i]);
+                System.out.print(arr[i] + " ");
             }
         }
+        System.out.println();
 
     }
 
@@ -22,10 +23,11 @@ public class Task6
             {
                 if (arr[i][j] % 2 != 0)
                 {
-                    System.out.println(arr[i][j]);
+                    System.out.print(arr[i][j] + " ");
                 }
             }
         }
+        System.out.println();
     }
 
     public static void main(String[] args)
