@@ -354,8 +354,5 @@ public class Lab
         System.out.println("Start point: (" + result[0] + ", " + result[2] + ")");
         System.out.println("End point: (" + result[1] + ", " + result[3] + ")");
 
-
-
-
     }
 }
