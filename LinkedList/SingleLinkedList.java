@@ -195,4 +195,13 @@ public class SingleLinkedList
         System.out.println("Instructor: " + temp.instructor);
     }
 
+    public void displayByIndex(int index)
+    {
+        Course temp = findNodeByIndex(index);
+        System.out.println("ID: " + temp.id);
+        System.out.println("Name: " + temp.name);
+        System.out.println("Credit: " + temp.credit);
+        System.out.println("Instructor: " + temp.instructor);
+    }
+
 }
