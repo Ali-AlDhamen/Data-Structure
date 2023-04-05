@@ -32,18 +32,23 @@ public class DoubleCircleLinkedList
         }
     }
 
-    boolean isEmpty(){
+    boolean isEmpty()
+    {
         return head == null;
     }
 
-    void addFirst(int val){
+    void addFirst(int val)
+    {
         Node node = new Node(val);
-        if(isEmpty()){
+        if (isEmpty())
+        {
             head = node;
             tail = node;
             node.next = head;
             node.prev = tail;
-        }else{
+        }
+        else
+        {
             node.next = head;
             head.prev = node;
             head = node;
@@ -53,15 +58,18 @@ public class DoubleCircleLinkedList
         size++;
     }
 
-
-    void addLast(int val){
+    void addLast(int val)
+    {
         Node node = new Node(val);
-        if(isEmpty()){
+        if (isEmpty())
+        {
             head = node;
             tail = node;
             node.next = head;
             node.prev = tail;
-        }else{
+        }
+        else
+        {
             tail.next = node;
             node.prev = tail;
             tail = node;
@@ -71,19 +79,26 @@ public class DoubleCircleLinkedList
         size++;
     }
 
-
-    void add(int val, int index){
-        if(index < 0 || index > size){
+    void add(int val, int index)
+    {
+        if (index < 0 || index > size)
+        {
             throw new IndexOutOfBoundsException();
         }
-        if(index == 0){
+        if (index == 0)
+        {
             addFirst(val);
-        }else if(index == size){
+        }
+        else if (index == size)
+        {
             addLast(val);
-        }else{
+        }
+        else
+        {
             Node node = new Node(val);
             Node temp = head;
-            for(int i = 0; i < index - 1; i++){
+            for (int i = 0; i < index - 1; i++)
+            {
                 temp = temp.next;
             }
             node.next = temp.next;
@@ -94,15 +109,19 @@ public class DoubleCircleLinkedList
         }
     }
 
-
-    void removeFirst(){
-        if(isEmpty()){
+    void removeFirst()
+    {
+        if (isEmpty())
+        {
             throw new IndexOutOfBoundsException();
         }
-        if(size == 1){
+        if (size == 1)
+        {
             head = null;
             tail = null;
-        }else{
+        }
+        else
+        {
             head = head.next;
             head.prev = tail;
             tail.next = head;
@@ -110,15 +129,19 @@ public class DoubleCircleLinkedList
         size--;
     }
 
-
-    void removeLast(){
-        if(isEmpty()){
+    void removeLast()
+    {
+        if (isEmpty())
+        {
             throw new IndexOutOfBoundsException();
         }
-        if(size == 1){
+        if (size == 1)
+        {
             head = null;
             tail = null;
-        }else{
+        }
+        else
+        {
             tail = tail.prev;
             tail.next = head;
             head.prev = tail;
@@ -126,18 +149,25 @@ public class DoubleCircleLinkedList
         size--;
     }
 
-
-    void remove(int index){
-        if(index < 0 || index >= size){
+    void remove(int index)
+    {
+        if (index < 0 || index >= size)
+        {
             throw new IndexOutOfBoundsException();
         }
-        if(index == 0){
+        if (index == 0)
+        {
             removeFirst();
-        }else if(index == size - 1){
+        }
+        else if (index == size - 1)
+        {
             removeLast();
-        }else{
+        }
+        else
+        {
             Node temp = head;
-            for(int i = 0; i < index - 1; i++){
+            for (int i = 0; i < index - 1; i++)
+            {
                 temp = temp.next;
             }
             temp.next = temp.next.next;
@@ -146,10 +176,11 @@ public class DoubleCircleLinkedList
         }
     }
 
-
-    void printInForward(){
+    void printInForward()
+    {
         Node temp = head;
-        for(int i = 0; i < size; i++){
+        for (int i = 0; i < size; i++)
+        {
             System.out.print(temp.value + " -> ");
             temp = temp.next;
         }
@@ -157,10 +188,11 @@ public class DoubleCircleLinkedList
         System.out.println();
     }
 
-
-    void printInBackward(){
+    void printInBackward()
+    {
         Node temp = tail;
-        for(int i = 0; i < size; i++){
+        for (int i = 0; i < size; i++)
+        {
             System.out.print(temp.value + " -> ");
             temp = temp.prev;
         }
@@ -168,11 +200,13 @@ public class DoubleCircleLinkedList
         System.out.println();
     }
 
-
-    int findIndex(int val){
+    int findIndex(int val)
+    {
         Node temp = head;
-        for(int i = 0; i < size; i++){
-            if(temp.value == val){
+        for (int i = 0; i < size; i++)
+        {
+            if (temp.value == val)
+            {
                 return i;
             }
             temp = temp.next;
@@ -180,18 +214,18 @@ public class DoubleCircleLinkedList
         return -1;
     }
 
-
-    Node findNode(int val){
+    Node findNode(int val)
+    {
         Node temp = head;
-        for(int i = 0; i < size; i++){
-            if(temp.value == val){
+        for (int i = 0; i < size; i++)
+        {
+            if (temp.value == val)
+            {
                 return temp;
             }
             temp = temp.next;
         }
         return null;
     }
-
-
 
 }
