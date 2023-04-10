@@ -60,13 +60,23 @@ public class StackArray
         return top == stack.length - 1;
     }
 
-    public void print()
+    public int size()
+    {
+        return top + 1;
+    }
+
+    public void display()
     {
         for (int i = top; i >= 0; i--)
         {
             System.out.print(stack[i] + " ");
         }
         System.out.println();
+    }
+
+    void makeEmpty()
+    {
+        top = -1;
     }
 
 }

@@ -14,7 +14,14 @@ public class Main
 
         stack.push(5);
         stack.push(6);
-        stack.print();
+        stack.display();
+        System.out.println(stack.top());
+        System.out.println(stack.pop());
+        System.out.println(stack.top());
+        System.out.println(stack.size());
+        System.out.println(stack.isEmpty());
+        stack.makeEmpty();
+        System.out.println(stack.isEmpty());
         System.out.println(stack.isFull());
 
     }
