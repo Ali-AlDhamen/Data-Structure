@@ -4,25 +4,27 @@ public class Main
 {
     public static void main(String[] args)
     {
-        StackArray stack = new StackArray(5);
-        stack.push(1);
-        stack.push(2);
 
-        stack.push(3);
+        StackArray s1 = new StackArray(5);
+        s1.push(1);
+        System.out.println(s1.top());
+        s1.push(2);
+        System.out.println(s1.top());
+        s1.push(3);
+        System.out.println(s1.top());
+        s1.push(4);
+        System.out.println(s1.top());
+        s1.push(5);
+        System.out.println(s1.top());
 
-        stack.push(4);
+        StackList s2 = new StackList();
 
-        stack.push(5);
-        stack.push(6);
-        stack.display();
-        System.out.println(stack.top());
-        System.out.println(stack.pop());
-        System.out.println(stack.top());
-        System.out.println(stack.size());
-        System.out.println(stack.isEmpty());
-        stack.makeEmpty();
-        System.out.println(stack.isEmpty());
-        System.out.println(stack.isFull());
+        while (!s1.isEmpty())
+        {
+            s2.push(s1.pop());
+        }
+
+        s2.display();
 
     }
 }
