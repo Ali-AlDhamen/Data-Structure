@@ -24,6 +24,8 @@ public class StackArray
         }
     }
 
+  
+
     public int pop()
     {
         if (top == -1)
