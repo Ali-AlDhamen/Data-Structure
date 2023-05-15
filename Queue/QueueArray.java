@@ -26,7 +26,7 @@ public class QueueArray
         return size == queue.length;
     }
 
-    void enqueueLinear(int val)
+    void enqueue(int val)
     {
         if (isFull())
         {
@@ -38,19 +38,7 @@ public class QueueArray
         size++;
     }
 
-    void enqueueCircular(int val)
-    {
-        if (isFull())
-        {
-            System.out.println("Queue is full");
-            return;
-        }
-        queue[rear] = val;
-        rear = (rear + 1) % queue.length;
-        size++;
-    }
-
-    void deQueueLinear(int val)
+    void deQueue(int val)
     {
         if (isEmpty())
         {
@@ -77,6 +65,11 @@ public class QueueArray
     public static void main(String[] args)
     {
         QueueArray q = new QueueArray(5);
+        q.enqueue(10);
+
+        q.enqueue(20);
+
+        q.print();
 
     }
 

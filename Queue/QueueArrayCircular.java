@@ -24,7 +24,7 @@ public class QueueArrayCircular {
         return size == queue.length;
     }
 
-    void enqueueCircular(int val)
+    void enqueue(int val)
     {
         if (isFull())
         {
@@ -36,7 +36,7 @@ public class QueueArrayCircular {
         size++;
     }
 
-    int deQueueCircular()
+    int deQueue()
     {
         if (isEmpty())
         {
@@ -93,7 +93,10 @@ public class QueueArrayCircular {
     }
 
     public static void main(String[] args) {
-        
+        QueueArrayCircular queue = new QueueArrayCircular(5);
+        queue.enqueue(10);
+        queue.print();
+
     }
 
 }

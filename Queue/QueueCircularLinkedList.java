@@ -58,7 +58,7 @@ public class QueueCircularLinkedList
         size--;
         if (isEmpty())
         {
-            rear = null;
+            front = rear = null;
         }
     }
 
@@ -84,6 +84,11 @@ public class QueueCircularLinkedList
 
     void print()
     {
+        if (isEmpty())
+        {
+            System.out.println("Queue is empty");
+            return;
+        }
         Node temp = front;
         do
         {
@@ -98,11 +103,15 @@ public class QueueCircularLinkedList
         queue.enqueue(10);
         queue.enqueue(20);
         queue.enqueue(30);
-        queue.enqueue(40);
         queue.print();
         queue.dequeue();
         queue.print();
-        System.out.println("Front: " + queue.front());
-        System.out.println("Rear: " + queue.rear());
+        queue.dequeue();
+        queue.print();
+        queue.dequeue();
+        queue.print();
+        queue.dequeue();
+        queue.print();
+        
     }
 }
