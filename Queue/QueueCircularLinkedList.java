@@ -1,6 +1,6 @@
 package Queue;
 
-public class QueueLinkedList
+public class QueueCircularLinkedList
 {
 
     Node front;
@@ -42,6 +42,7 @@ public class QueueLinkedList
             rear.next = node;
             rear = node;
         }
+        rear.next = front;
         size++;
     }
 
@@ -53,6 +54,7 @@ public class QueueLinkedList
             return;
         }
         front = front.next;
+        rear.next = front;
         size--;
         if (isEmpty())
         {
@@ -60,21 +62,47 @@ public class QueueLinkedList
         }
     }
 
+    int front()
+    {
+        if (isEmpty())
+        {
+            System.out.println("Queue is underflow");
+            return -1;
+        }
+        return front.value;
+    }
+
+    int rear()
+    {
+        if (isEmpty())
+        {
+            System.out.println("Queue is underflow");
+            return -1;
+        }
+        return rear.value;
+    }
+
     void print()
     {
         Node temp = front;
-        while (temp != null)
+        do
         {
             System.out.print(temp.value + " ");
             temp = temp.next;
-        }
+        } while (temp != front);
+
         System.out.println();
     }
-
-    public static void main(String[] args)
-    {
-        QueueLinkedList queue = new QueueLinkedList();
-
+    public static void main(String[] args) {
+        QueueCircularLinkedList queue = new QueueCircularLinkedList();
+        queue.enqueue(10);
+        queue.enqueue(20);
+        queue.enqueue(30);
+        queue.enqueue(40);
+        queue.print();
+        queue.dequeue();
+        queue.print();
+        System.out.println("Front: " + queue.front());
+        System.out.println("Rear: " + queue.rear());
     }
-
 }
