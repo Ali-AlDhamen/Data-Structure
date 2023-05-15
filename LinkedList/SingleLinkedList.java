@@ -1,5 +1,4 @@
 package LinkedList;
-
 public class SingleLinkedList
 {
     private Course head;

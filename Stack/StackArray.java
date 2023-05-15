@@ -76,7 +76,7 @@ public class StackArray
         System.out.println();
     }
 
-    void makeEmpty()
+    public void makeEmpty()
     {
         top = -1;
     }
