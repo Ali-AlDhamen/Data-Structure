@@ -80,6 +80,10 @@ public class DeQueue
         front = front.next;
         front.prev = null;
         size--;
+        if (isEmpty())
+        {
+            rear = null;
+        }
     }
 
     void dequeueRear()
@@ -92,6 +96,10 @@ public class DeQueue
         rear = rear.prev;
         rear.next = null;
         size--;
+        if (isEmpty())
+        {
+            front = null;
+        }
     }
 
     void print()
