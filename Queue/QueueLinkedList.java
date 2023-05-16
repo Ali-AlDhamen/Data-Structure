@@ -24,6 +24,13 @@ public class QueueLinkedList
         }
     }
 
+    QueueLinkedList()
+    {
+        front = null;
+        rear = null;
+        size = 0;
+    }
+
     boolean isEmpty()
     {
         return front == null || size == 0;
@@ -74,6 +81,10 @@ public class QueueLinkedList
     public static void main(String[] args)
     {
         QueueLinkedList queue = new QueueLinkedList();
+        queue.enqueue(10);
+        queue.enqueue(20);
+
+        queue.print();
 
     }
 

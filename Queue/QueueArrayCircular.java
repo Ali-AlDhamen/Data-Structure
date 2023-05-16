@@ -1,34 +1,35 @@
 package Queue;
 
-public class QueueArrayCircular {
+public class QueueArrayCircular
+{
     private int size;
     private int front;
     private int rear;
-    private int queue[];
+    private String queue[];
 
     QueueArrayCircular(int size)
     {
         this.size = 0;
         front = 0;
         rear = 0;
-        queue = new int[size];
+        queue = new String[size];
     }
 
-    boolean isEmpty()
+    public boolean isEmpty()
     {
         return size == 0;
     }
 
-    boolean isFull()
+    public boolean isFull()
     {
         return size == queue.length;
     }
 
-    void enqueue(int val)
+    public void enqueue(String val)
     {
         if (isFull())
         {
-            System.out.println("Queue is full");
+            System.out.println("Queue is overflow");
             return;
         }
         queue[rear] = val;
@@ -36,35 +37,35 @@ public class QueueArrayCircular {
         size++;
     }
 
-    int deQueue()
+    public String deQueue()
     {
         if (isEmpty())
         {
-            System.out.println("Queue is empty");
-            return -1;
+            System.out.println("Queue is underflow");
+            return null;
         }
-        int val = queue[front];
+        String val = queue[front];
         front = (front + 1) % queue.length;
         size--;
         return val;
     }
 
-    int front()
+    public String front()
     {
         if (isEmpty())
         {
             System.out.println("Queue is empty");
-            return -1;
+            return null;
         }
         return queue[front];
     }
 
-    int rear()
+    public String rear()
     {
         if (isEmpty())
         {
             System.out.println("Queue is empty");
-            return -1;
+            return null;
         }
         if (rear == 0)
         {
@@ -73,7 +74,7 @@ public class QueueArrayCircular {
         return queue[rear - 1];
     }
 
-    void print()
+    public void display()
     {
         if (isEmpty())
         {
@@ -84,18 +85,32 @@ public class QueueArrayCircular {
         do
         {
 
-            System.out.print(queue[i] + " -> ");
+            System.out.println(i + 1 + "." + queue[i]);
             i = (i + 1) % queue.length;
         } while (i != rear);
-
-        System.out.println("END");
+        System.out.println();
 
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         QueueArrayCircular queue = new QueueArrayCircular(5);
-        queue.enqueue(10);
-        queue.print();
+        // enqueue all orders
+        queue.enqueue("install App");
+        queue.enqueue("Create Account");
+        queue.enqueue("Login");
+        queue.enqueue("Apply job-1");
+        queue.enqueue("Sign out");
+
+        // display all orders
+        queue.display();
+
+        // dequeue first 2 orders
+        queue.deQueue();
+        queue.deQueue();
+
+        // display all orders
+        queue.display();
 
     }
 
