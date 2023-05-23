@@ -8,7 +8,7 @@ public class QueueArray
     private int rear;
     private int queue[];
 
-    QueueArray(int size)
+    public QueueArray(int size)
     {
         this.size = 0;
         front = 0;
@@ -16,7 +16,7 @@ public class QueueArray
         queue = new int[size];
     }
 
-    boolean isEmpty()
+    public boolean isEmpty()
     {
         return size == 0;
     }
@@ -26,7 +26,7 @@ public class QueueArray
         return size == queue.length;
     }
 
-    void enqueue(int val)
+    public void enqueue(int val)
     {
         if (isFull())
         {
@@ -71,6 +71,11 @@ public class QueueArray
 
         q.print();
 
+    }
+
+    public int dequeue()
+    {
+        return 0;
     }
 
 }

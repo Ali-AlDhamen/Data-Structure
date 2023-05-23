@@ -1,105 +1,112 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "type": "java",
-            "name": "Current File",
-            "request": "launch",
-            "mainClass": "${file}"
-        },
-        {
-            "type": "java",
-            "name": "Lab",
-            "request": "launch",
-            "mainClass": "Arrays.Lab",
-            "projectName": "Data Structure_6a7b704b"
-        },
-        {
-            "type": "java",
-            "name": "Main",
-            "request": "launch",
-            "mainClass": "CircleLinkedList.Main",
-            "projectName": "Data Structure_6a7b704b"
-        },
-        {
-            "type": "java",
-            "name": "Main(1)",
-            "request": "launch",
-            "mainClass": "DoubleLinkedList.Main",
-            "projectName": "Data Structure_6a7b704b"
-        },
-        {
-            "type": "java",
-            "name": "Main(2)",
-            "request": "launch",
-            "mainClass": "LinkedList.Main",
-            "projectName": "Data Structure_6a7b704b"
-        },
-        {
-            "type": "java",
-            "name": "DeQueue",
-            "request": "launch",
-            "mainClass": "Queue.DeQueue",
-            "projectName": "Data Structure_6a7b704b"
-        },
-        {
-            "type": "java",
-            "name": "PriorityQueue",
-            "request": "launch",
-            "mainClass": "Queue.PriorityQueue",
-            "projectName": "Data Structure_6a7b704b"
-        },
-        {
-            "type": "java",
-            "name": "QueueArray",
-            "request": "launch",
-            "mainClass": "Queue.QueueArray",
-            "projectName": "Data Structure_6a7b704b"
-        },
-        {
-            "type": "java",
-            "name": "QueueArrayCircular",
-            "request": "launch",
-            "mainClass": "Queue.QueueArrayCircular",
-            "projectName": "Data Structure_6a7b704b"
-        },
-        {
-            "type": "java",
-            "name": "QueueCircularLinkedList",
-            "request": "launch",
-            "mainClass": "Queue.QueueCircularLinkedList",
-            "projectName": "Data Structure_6a7b704b"
-        },
-        {
-            "type": "java",
-            "name": "QueueLinkedList",
-            "request": "launch",
-            "mainClass": "Queue.QueueLinkedList",
-            "projectName": "Data Structure_6a7b704b"
-        },
-        {
-            "type": "java",
-            "name": "Recursion",
-            "request": "launch",
-            "mainClass": "Recursion.Recursion",
-            "projectName": "Data Structure_6a7b704b"
-        },
-        {
-            "type": "java",
-            "name": "Main(3)",
-            "request": "launch",
-            "mainClass": "Stack.Main",
-            "projectName": "Data Structure_6a7b704b"
-        },
-        {
-            "type": "java",
-            "name": "BinarySearchTree",
-            "request": "launch",
-            "mainClass": "tree.BinarySearchTree",
-            "projectName": "Data Structure_6a7b704b"
-        }
-    ]
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "GraphArray",
+      "request": "launch",
+      "mainClass": "Graph.GraphArray",
+      "projectName": "Data Structure_6a7b704b"
+    },
+    {
+      "type": "java",
+      "name": "Current File",
+      "request": "launch",
+      "mainClass": "${file}"
+    },
+    {
+      "type": "java",
+      "name": "Lab",
+      "request": "launch",
+      "mainClass": "Arrays.Lab",
+      "projectName": "Data Structure_6a7b704b"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "CircleLinkedList.Main",
+      "projectName": "Data Structure_6a7b704b"
+    },
+    {
+      "type": "java",
+      "name": "Main(1)",
+      "request": "launch",
+      "mainClass": "DoubleLinkedList.Main",
+      "projectName": "Data Structure_6a7b704b"
+    },
+    {
+      "type": "java",
+      "name": "Main(2)",
+      "request": "launch",
+      "mainClass": "LinkedList.Main",
+      "projectName": "Data Structure_6a7b704b"
+    },
+    {
+      "type": "java",
+      "name": "DeQueue",
+      "request": "launch",
+      "mainClass": "Queue.DeQueue",
+      "projectName": "Data Structure_6a7b704b"
+    },
+    {
+      "type": "java",
+      "name": "PriorityQueue",
+      "request": "launch",
+      "mainClass": "Queue.PriorityQueue",
+      "projectName": "Data Structure_6a7b704b"
+    },
+    {
+      "type": "java",
+      "name": "QueueArray",
+      "request": "launch",
+      "mainClass": "Queue.QueueArray",
+      "projectName": "Data Structure_6a7b704b"
+    },
+    {
+      "type": "java",
+      "name": "QueueArrayCircular",
+      "request": "launch",
+      "mainClass": "Queue.QueueArrayCircular",
+      "projectName": "Data Structure_6a7b704b"
+    },
+    {
+      "type": "java",
+      "name": "QueueCircularLinkedList",
+      "request": "launch",
+      "mainClass": "Queue.QueueCircularLinkedList",
+      "projectName": "Data Structure_6a7b704b"
+    },
+    {
+      "type": "java",
+      "name": "QueueLinkedList",
+      "request": "launch",
+      "mainClass": "Queue.QueueLinkedList",
+      "projectName": "Data Structure_6a7b704b"
+    },
+    {
+      "type": "java",
+      "name": "Recursion",
+      "request": "launch",
+      "mainClass": "Recursion.Recursion",
+      "projectName": "Data Structure_6a7b704b"
+    },
+    {
+      "type": "java",
+      "name": "Main(3)",
+      "request": "launch",
+      "mainClass": "Stack.Main",
+      "projectName": "Data Structure_6a7b704b"
+    },
+    {
+      "type": "java",
+      "name": "BinarySearchTree",
+      "request": "launch",
+      "mainClass": "tree.BinarySearchTree",
+      "projectName": "Data Structure_6a7b704b"
+    }
+  ]
 }
