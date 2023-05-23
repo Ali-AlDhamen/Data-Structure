@@ -16,41 +16,11 @@ public class DeQueue
         {
             this.value = val;
         }
-
-        public Node(int val, Node next)
-        {
-            this.value = val;
-            this.next = next;
-        }
-
-        public Node(int val, Node next, Node prev)
-        {
-            this.value = val;
-            this.next = next;
-            this.prev = prev;
-        }
     }
 
     boolean isEmpty()
     {
         return front == null || size == 0;
-    }
-
-    void enqueueFront(int val)
-    {
-        Node node = new Node(val);
-        if (isEmpty())
-        {
-            front = node;
-            rear = node;
-        }
-        else
-        {
-            node.next = front;
-            front.prev = node;
-            front = node;
-        }
-        size++;
     }
 
     void enqueueRear(int val)
@@ -70,40 +40,34 @@ public class DeQueue
         size++;
     }
 
-    void dequeueFront()
+    void dequeueFrontTwice()
     {
         if (isEmpty())
         {
-            System.out.println("Queue is underflow");
+            System.out.println("Queue is empty");
             return;
         }
-        front = front.next;
-        front.prev = null;
-        size--;
-        if (isEmpty())
-        {
-            rear = null;
-        }
-    }
-
-    void dequeueRear()
-    {
-        if (isEmpty())
-        {
-            System.out.println("Queue is underflow");
-            return;
-        }
-        rear = rear.prev;
-        rear.next = null;
-        size--;
-        if (isEmpty())
+        else if (size == 2)
         {
             front = null;
+            rear = null;
         }
+        else
+        {
+            front = front.next.next;
+            front.prev = null;
+            
+        }
+        size -= 2;
     }
 
-    void print()
+    void display()
     {
+        if (isEmpty())
+        {
+            System.out.println("Queue is empty");
+            return;
+        }
         Node temp = front;
         while (temp != null)
         {
@@ -113,20 +77,27 @@ public class DeQueue
         System.out.println("");
     }
 
-    public static void main(String[] args) {
-        DeQueue queue = new DeQueue();
-        queue.enqueueFront(10);
-        queue.enqueueFront(20);
-        queue.enqueueFront(30);
-        queue.enqueueFront(40);
-        queue.enqueueFront(50);
+    public static void main(String[] args)
+    {
+        DeQueue Q1 = new DeQueue();
 
-        queue.print();
+        Q1.enqueueRear(2);
+        Q1.enqueueRear(2);
+        Q1.enqueueRear(1);
+        Q1.enqueueRear(0);
+        Q1.enqueueRear(0);
+        Q1.enqueueRear(0);
+        Q1.enqueueRear(0);
+        Q1.enqueueRear(0);
+        Q1.enqueueRear(0);
+        Q1.enqueueRear(0);
 
-        queue.dequeueFront();
-        queue.dequeueFront();
+        Q1.dequeueFrontTwice();
+        Q1.dequeueFrontTwice();
+        Q1.dequeueFrontTwice();
 
-        queue.print();
+
+        Q1.display();
 
     }
 

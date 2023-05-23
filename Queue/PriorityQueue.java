@@ -38,7 +38,6 @@ public class PriorityQueue
         Node prev = null;
         while (temp != null && temp.key > node.key)
         {
-            System.out.println("temp: " + temp.value);
             prev = temp;
             temp = temp.next;
         }
