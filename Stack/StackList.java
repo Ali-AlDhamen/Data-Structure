@@ -1,6 +1,6 @@
 package Stack;
 
-public class StackList
+public class StackList<T>
 {
     private Node top;
     private int size;
@@ -13,17 +13,17 @@ public class StackList
 
     private class Node
     {
-        int data;
+        T data;
         Node next;
 
-        public Node(int data)
+        public Node(T data)
         {
             this.data = data;
             this.next = null;
         }
     }
 
-    public void push(int value)
+    public void push(T value)
     {
         Node newNode = new Node(value);
         newNode.next = top;
@@ -31,28 +31,28 @@ public class StackList
         size++;
     }
 
-    public int pop()
+    public T pop()
     {
         if (top == null)
         {
             System.out.println("Stack is empty");
-            return -1;
+            return null;
         }
         else
         {
-            int value = top.data;
+            T value = top.data;
             top = top.next;
             size--;
             return value;
         }
     }
 
-    public int top()
+    public T top()
     {
         if (top == null)
         {
             System.out.println("Stack is empty");
-            return -1;
+            return null;
         }
         else
         {
