@@ -134,7 +134,7 @@ public class GraphArray
         return -1;
     }
 
-    public int degreeIn(String label)
+    public  int degreeIn(String label)
     {
         int index = indexOf(label);
         if (index != -1)
@@ -182,8 +182,13 @@ public class GraphArray
         graph.addEdge("A", "C");
         graph.addEdge("B", "D");
         graph.addEdge("C", "D");
+        graph.addEdge("A", "D");
+
+
 
         graph.displayGraph();
+        System.out.println(graph.degreeIn("A"));
+        System.out.println(graph.degreeOut("C"));
 
     }
 

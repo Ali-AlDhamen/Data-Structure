@@ -223,8 +223,7 @@ public class BinarySearchTree
         if (node != null)
         {
             inOrderTraversal(node.leftChild);
-            if (node.value % 2 != 0)
-                System.out.println(node.value);
+            System.out.println(node.value);
             inOrderTraversal(node.rightChild);
         }
     }
@@ -292,34 +291,36 @@ public class BinarySearchTree
         }
     }
 
-    // Method to calculate the height of the binary tree
-    public int getHeight()
+    int depth(Node node)
     {
-        return calculateHeight(root);
+        int depth = 0;
+        while (node.parent != null)
+        {
+            node = node.parent;
+            depth++;
+        }
+        return depth;
     }
 
     public static void main(String[] args)
     {
-        BinarySearchTree bst = new BinarySearchTree();
-        bst.insert(50);
-        bst.insert(12);
-        bst.insert(9);
+        BinarySearchTree tree = new BinarySearchTree();
+        tree.insert(10);
+        tree.insert(20);
+        tree.insert(30);
+        tree.insert(11);
+        tree.insert(12);
+        tree.insert(13);
+        tree.insert(40);
+        tree.insert(22);
+        tree.insert(23);
+        tree.insert(24);
+        tree.insert(25);
 
-        bst.insert(72);
-        bst.insert(54);
-        bst.insert(29);
-        bst.insert(76);
-        bst.insert(67);
-        bst.insert(17);
-        bst.insert(23);
-        bst.insert(14);
+        tree.inOrderTraversal(tree.getRoot());
+        int rootHeight = tree.calculateHeight(tree.getRoot());
+        int nodeHeight = tree.calculateHeight(tree.find(tree.getRoot(), 25));
+        System.out.println("the depth is " + (rootHeight - nodeHeight));
 
-        System.out.println("Height of the tree is: " + bst.calculateHeight(bst.root));
-        System.out.println("---InOrder Traversal:------");
-        bst.inOrderTraversal(bst.getRoot());
-        System.out.println("---postOrder Traversal:------");
-        bst.postOrderTraversal(bst.getRoot());
-        System.out.println("Minimum Node value: " + bst.findMin(bst.getRoot()).getValue());
-        System.out.println("Maximum Node value: " + bst.findMax(bst.getRoot()).getValue());
     }
 }
