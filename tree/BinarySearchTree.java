@@ -245,8 +245,7 @@ public class BinarySearchTree
         {
             postOrderTraversal(node.leftChild);
             postOrderTraversal(node.rightChild);
-            if (node.value % 2 == 0)
-                System.out.println(node.value);
+            System.out.println(node.value);
         }
     }
 
